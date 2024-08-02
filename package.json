@@ -1,6 +1,6 @@
 {
   "name": "@adaas/a-cli",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "The SDK to interact with A-Products API",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -27,6 +27,9 @@
     "start": "nodemon ./index.ts",
     "test": "jest",
     "publish": "node ./.exec/publish.js",
+    "publish:patch": "node ./.exec/publish.js patch -m \"$1\" ",
+    "publish:minor": "node ./.exec/publish.js minor",
+    "publish:major": "node ./.exec/publish.js major",
     "build": "node ./.exec/build.js"
   },
   "repository": {
