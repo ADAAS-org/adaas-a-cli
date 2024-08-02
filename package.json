@@ -1,0 +1,76 @@
+{
+  "name": "@adaas/a-cli",
+  "version": "0.0.5",
+  "description": "The SDK to interact with A-Products API",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "config",
+      "constants",
+      "src",
+      "lib",
+      "db",
+      "shared"
+    ],
+    "exec": "node -r tsconfig-paths/register -r ts-node/register ",
+    "ext": "ts, js"
+  },
+  "scripts": {
+    "start": "nodemon ./index.ts",
+    "test": "jest",
+    "publish": "node ./.exec/publish.js",
+    "build": "node ./.exec/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADAAS-org/adaas-a-cli.git"
+  },
+  "keywords": [
+    "adaas",
+    "a-cli",
+    "digital products"
+  ],
+  "author": "adaas.org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ADAAS-org/adaas-a-cli/issues"
+  },
+  "homepage": "https://github.com/ADAAS-org/adaas-a-cli#readme",
+  "dependencies": {
+    "@adaas/a-auth": "^0.0.55",
+    "@adaas/a-sdk-types": "^0.0.55",
+    "@types/node": "^20.10.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.14",
+    "@types/jest": "^29.5.12",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.0",
+    "jest": "^29.7.0",
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.4",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  }
+}

@@ -1,0 +1,2 @@
+import { NAMESPACE_APP_INTERACTIONS__ENTITY_API } from "./template/NAMESPACE_Template.api";
+export declare const TEMPLATE: NAMESPACE_APP_INTERACTIONS__ENTITY_API;
