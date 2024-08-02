@@ -1,10 +1,13 @@
 {
   "name": "@adaas/a-cli",
-  "version": "0.0.18",
+  "version": "0.0.21",
   "description": "The SDK to interact with A-Products API",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "a-cli": "./dist/index.js"
+  },
   "nodemonConfig": {
     "ignore": [
       "**/*.test.ts",
@@ -27,7 +30,7 @@
     "start": "nodemon ./index.ts",
     "test": "jest",
     "publish": "node ./.exec/publish.js",
-    "publish:patch": "node ./.exec/publish.js patch --verbose -m \"$1\" ",
+    "publish:patch": "node ./.exec/publish.js patch --verbose -m echo\" $1\" ",
     "publish:minor": "node ./.exec/publish.js minor",
     "publish:major": "node ./.exec/publish.js major",
     "build": "node ./.exec/build.js"
