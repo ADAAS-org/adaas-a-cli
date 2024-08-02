@@ -82,7 +82,7 @@ module.exports = class CommandsManager {
     async npmPublish() {
         return new Promise(async (resolve, reject) => {
             this.exec(
-                `npm publish --access public`,
+                `npm publish --access public --ignore-scripts`,
                 await this.commandHandler(resolve, reject, 'NPM publish complete')
             );
         });
