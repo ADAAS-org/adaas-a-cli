@@ -64,6 +64,19 @@ const CommandsManager = require('./commands');
 
     await cm.gitTagPush();
 
+    await cm.npmPublish();
+
+
+    A_SDK_Context.Logger.log(
+      '===============================================',
+      `  New Version Published: | ${name}`,
+      `       [${versionOption}]           | v${version} `,
+      '-----------------------------------------------',
+      `  Ready                  |  `,
+      `  Check it out at:       |  https://www.npmjs.com/package/${name}`,
+      '==============================================='
+    );
+
 
   } catch (error) {
     A_SDK_Context.Logger.error(error);
