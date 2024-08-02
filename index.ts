@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { A_CLI_SdkInitCommand } from "./src/commands/sdk/init.command";
 import { A_CLI_Processor } from "./src/global/A_CLI_Processor.class";
 
